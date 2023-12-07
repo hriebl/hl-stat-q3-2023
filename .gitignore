@@ -47,3 +47,8 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+/.quarto/
+/quarto-cli/
+/quellen/*
+!/quellen/demografie.xlsx

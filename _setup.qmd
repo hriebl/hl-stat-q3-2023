@@ -1,0 +1,79 @@
+```{r}
+#| include: false
+
+file.create("docs/.nojekyll")
+
+library(ggplot2)
+
+hl_red <- "#d40f14"
+hl_darkred <- "#ac0a26"
+hl_colors <- c(
+  "#85c8e8",
+  "#a7bf5c",
+  "#fbba00",
+  "#8a5d9f",
+  "#ee7100",
+  "#004161"
+)
+
+theme_update(
+  axis.text = element_text(size = rel(1)),
+  legend.text = element_text(size = rel(1))
+)
+
+options(knitr.kable.NA = "-")
+
+kable <- function(
+  x,
+  format,
+  digits = getOption("digits"),
+  row.names = NA,
+  col.names = NA,
+  align,
+  caption = NULL,
+  label = NULL,
+  format.args = list(big.mark = ".", decimal.mark = ","),
+  escape = TRUE,
+  ...
+) {
+  knitr::kable(
+    x = x,
+    format = format,
+    digits = digits,
+    row.names = row.names,
+    col.names = col.names,
+    align = align,
+    caption = caption,
+    label = label,
+    format.args = format.args,
+    escape = escape,
+    ...
+  )
+}
+
+download_this <- function(
+  .data,
+  ...,
+  output_name = NULL,
+  output_extension = ".xlsx",
+  button_label = "Download als XLSX",
+  button_type = c("default", "primary", "success", "info", "warning", "danger"),
+  icon = "fa fa-save",
+  self_contained = FALSE,
+  csv2 = TRUE,
+  ggsave_args = list()
+) {
+  downloadthis::download_this(
+    .data = .data,
+    ...,
+    output_name = output_name,
+    output_extension = output_extension,
+    button_label = button_label,
+    button_type = button_type,
+    icon = icon,
+    self_contained = self_contained,
+    csv2 = csv2,
+    ggsave_args = ggsave_args
+  )
+}
+```

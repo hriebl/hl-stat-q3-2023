@@ -1,0 +1,71 @@
+/*-- scss:defaults --*/
+
+$hl-red: #d40f14;
+$hl-darkred: #ac0a26;
+
+$hl-color-1: #85c8e8;
+$hl-color-2: #a7bf5c;
+$hl-color-3: #fbba00;
+$hl-color-4: #8a5d9f;
+$hl-color-5: #ee7100;
+$hl-color-6: #004161;
+
+$font-family-sans-serif: "Open Sans", Arial, Tahoma, sans-serif;
+$link-color: $hl-color-6;
+$toc-color: $hl-red;
+
+/*-- scss:rules --*/
+
+#quarto-sidebar .sidebar-logo {
+  max-width: 100%;
+}
+
+#quarto-sidebar .sidebar-title {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+#quarto-sidebar .sidebar-link.active {
+  color: $hl-red;
+}
+
+#quarto-sidebar .sidebar-link:hover {
+  color: $hl-red;
+}
+
+.page-navigation .pagination-link:hover {
+  color: $hl-red;
+}
+
+#quarto-title-img {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.quarto-title {
+  margin-bottom: 0.75rem;
+}
+
+.quarto-title-meta {
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: auto;
+}
+
+.table > thead {
+  border-top: 1px solid #9ba5ae;
+}
+
+.cell .table-sm.small {
+  font-size: 1rem;
+}
+
+.cell .table-sm.small > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+}
+
+.btn {
+  margin-bottom: 1.5rem;
+}

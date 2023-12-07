@@ -1,0 +1,30 @@
+## Abkürzungen {.unnumbered}
+
+| Abkürzung    | Erklärung |
+| :---         | :------------ |
+| ...          | bei Redaktionsschluss nicht vorliegend |
+| ALG          | Arbeitslosengeld |
+| ALG II       | Arbeitslosengeld II, seit 01.01.23 Bürgergeld |
+| Bedarfsg.    | Bedarfsgemeinschaft |
+| DE           | Deutschland |
+| EU           | Europäische Union ohne Deutschland und Großbritannien |
+| Einw.        | Einwohner:innen |
+| Entw.        | Entwicklung |
+| Mill.        | Millionen |
+| N            | Nord |
+| Pers.        | Person |
+| Q            | Quartal |
+| S            | Süd |
+| SGB II       | Zweites Buch Sozialgesetzbuch, Grundsicherung für Arbeitsuchende, seit 01.01.23 Bürgergeld |
+| SGB III      | Drittes Buch Sozialgesetzbuch, Arbeitsförderung |
+| Sonst.       | Sonstiges |
+| St.          | Sankt |
+| Staatsangeh. | Staatsangehörigkeit |
+| Tsd.         | Tausend |
+| Übern.       | Übernachtung |
+| Verw.tät.    | Verwaltungstätigkeit |
+| lfd.         | laufend |
+| n.           | nach |
+| nat.         | natürlich |
+| sozialvers.  | sozialversicherungspflichtig |
+| vorl.        | vorläufig |

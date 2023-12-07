@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Statistische Vierteljahresschrift Q3&nbsp;2023"
+  author: >-
+    Hansestadt Lübeck <br>
+    Der Bürgermeister <br>
+    1.102 Zentrale Verwaltungsdienste <br>
+    Kommunale Statistikstelle
+  date: "2023-11-17"
+  chapters:
+    - index.qmd
+    - abkuerzungen.qmd
+    - bevoelkerung.qmd
+  sidebar:
+    logo: img/logo.svg
+    title: "Statistische Vierteljahresschrift Q3&nbsp;2023"
+  favicon: img/favicon.ico
+
+format:
+  html:
+    template-partials:
+      - template/title-block.html
+    theme:
+      - default
+      - template/custom.scss
+
+execute:
+  echo: false
+  error: false
+  warning: false
+
+lang: de

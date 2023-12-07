@@ -1,0 +1,98 @@
+{{< include _setup.qmd >}}
+
+# Bevölkerung
+
+## Entwicklung
+
+```{r}
+tab <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A5:B9")
+kable(tab)
+
+download_this(tab, output_name = "rueckblick")
+```
+
+```{r}
+tab <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A11:B16")
+kable(tab)
+
+download_this(tab, output_name = "entwicklung")
+```
+
+```{r}
+tab <- readxl::read_xlsx("quellen/demografie.xlsx", range = "G5:H108")
+tab$Monat <- lubridate::my(tab$Monat)
+
+p <- ggplot(tab) +
+  geom_line(aes(Monat, Einwohner), color = hl_colors[1]) +
+  ggtitle("Bevölkerungsentwicklung seit 2000") +
+  xlab("Jahr") +
+  ylab("Einwohner:innen am Ende des Quartals")
+
+plotly::ggplotly(p)
+```
+
+## Altersgruppen
+
+```{r}
+tab <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A20:D24")
+kable(tab)
+
+download_this(tab, output_name = "altersgruppen")
+```
+
+## Staatsangehörigkeit
+
+```{r}
+tab <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A28:D32")
+kable(tab)
+
+download_this(tab, output_name = "staatsangehoerigkeit")
+```
+
+## Stadtteile
+
+```{r}
+tab <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A36:D47")
+kable(tab)
+
+download_this(tab, output_name = "stadtteile")
+```
+
+## Geburten und Sterbefälle
+
+```{r}
+tab1 <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A51:E54")
+names(tab1)[1] <- ""
+kable(tab1)
+
+download_this(tab, output_name = "geburten")
+```
+
+## Zu- und Fortzüge
+
+```{r}
+tab2 <- readxl::read_xlsx("quellen/demografie.xlsx", range = "A58:E61")
+names(tab2)[1] <- ""
+kable(tab2)
+
+download_this(tab, output_name = "zuzuege")
+```
+
+```{r}
+tab <- data.frame(
+  Quartal = c(names(tab1)[2:5], names(tab2)[2:5]),
+  Art = c(rep("Natürliches Saldo", 4), rep("Wanderungssaldo", 4)),
+  Saldo = unlist(c(tab1[3, 2:5], tab2[3, 2:5]))
+)
+
+tab$Quartal <- forcats::fct_inorder(tab$Quartal)
+tab$Art <- forcats::fct_inorder(tab$Art)
+
+p <- ggplot(tab) +
+  geom_col(aes(Quartal, Saldo, fill = Art), position = "dodge") +
+  scale_fill_manual(name = NULL, values = hl_colors) +
+  ggtitle("Bevölkerungsbewegungen der letzten vier Quartale") +
+  ylab("Veränderung des Einwohner:innenstand")
+
+plotly::ggplotly(p)
+```
