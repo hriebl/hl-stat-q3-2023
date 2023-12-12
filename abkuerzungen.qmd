@@ -7,24 +7,24 @@
 | ALG II       | Arbeitslosengeld II, seit 01.01.23 Bürgergeld |
 | Bedarfsg.    | Bedarfsgemeinschaft |
 | DE           | Deutschland |
-| EU           | Europäische Union ohne Deutschland und Großbritannien |
 | Einw.        | Einwohner:innen |
 | Entw.        | Entwicklung |
+| EU           | Europäische Union ohne Deutschland und Großbritannien |
+| lfd.         | laufend |
 | Mill.        | Millionen |
 | N            | Nord |
+| n.           | nach |
+| nat.         | natürlich |
 | Pers.        | Person |
 | Q            | Quartal |
 | S            | Süd |
 | SGB II       | Zweites Buch Sozialgesetzbuch, Grundsicherung für Arbeitsuchende, seit 01.01.23 Bürgergeld |
 | SGB III      | Drittes Buch Sozialgesetzbuch, Arbeitsförderung |
 | Sonst.       | Sonstiges |
+| sozialvers.  | sozialversicherungspflichtig |
 | St.          | Sankt |
 | Staatsangeh. | Staatsangehörigkeit |
 | Tsd.         | Tausend |
 | Übern.       | Übernachtung |
 | Verw.tät.    | Verwaltungstätigkeit |
-| lfd.         | laufend |
-| n.           | nach |
-| nat.         | natürlich |
-| sozialvers.  | sozialversicherungspflichtig |
 | vorl.        | vorläufig |
